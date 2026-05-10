@@ -20,7 +20,7 @@ jobs:
           version: 'latest'
 
       - name: Install dependencies and build
-        run: pnpm install --frozen-lockfile && pnpm run build && pnpm run postbuild
+        run: pnpm install --frozen-lockfile && npx vercel build --prod && pnpm run postbuild
 
       - name: Prepare build output for upload
         run: |
